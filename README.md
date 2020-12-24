@@ -20,24 +20,15 @@ Installation Instructions
 Installation Verification
 ---------------------------
 
-In the directory where the HCL Metadata tools API was extracted, copy the following java code to a file named 
+1) Copy `VerifyMetadataToolsInstallation.java` to the directory where the HCL Metadata tools API was extracted.
 
-`VerifyMetadataToolsInstallation.java` :
+2) Compile the Java class using the following command:
 
-```
-    public class VerifyMetadataToolsInstallation {
-        public static void main(String [] args) {
-            com.hcl.metadata.MetadataUtils.addMetadata("MY.LOAD.DSN", "AMEMBER", "THE_ID", "Hello World", false);
-        }
-    }
-```
+         javac VerifyMetadataToolsInstallation.java
 
-Compile the Java class using the following command:
+3) Run the installation verification with : 
 
-`javac VerifyMetadataToolsInstallation.java`
+        java VerifyMetadataToolsInstallation
 
-Run the installation verification in the HCL Metadata Tools directory with command: 
-
-`java VerifyMetadataToolsInstallation`
-
-If you see a message saying that  "MY.LOAD.DSN" does not exist, that indicates the installation was successful as the DLL for HCL Metadata tools was loaded successfully.
+The installaton was a success if a message saying "MY.LOAD.DSN" does not exist is displayed.
+This message indicates the HCL Metadata Utilities DLL was found and loaded successfully.
